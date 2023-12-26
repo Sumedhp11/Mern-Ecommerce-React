@@ -5,10 +5,8 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import { CartPage } from "./pages/CartPage";
-<<<<<<< HEAD
 import CheckoutPage from "./pages/CheckoutPage";
-=======
->>>>>>> main/master
+import ProductdetailsPage from "./pages/ProductdetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -27,13 +25,15 @@ const router = createBrowserRouter([
     path: "/cart",
     element: <CartPage />,
   },
-<<<<<<< HEAD
+
   {
     path: "/checkout",
     element: <CheckoutPage />,
   },
-=======
->>>>>>> main/master
+  {
+    path: "/productdetails",
+    element: <ProductdetailsPage />,
+  },
 ]);
 
 function App() {
