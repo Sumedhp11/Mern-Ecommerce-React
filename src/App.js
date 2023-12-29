@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
@@ -8,6 +8,9 @@ import { CartPage } from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ProductdetailsPage from "./pages/ProductdetailsPage";
 import Protected from "./features/auth/Protected";
+import { fetchItemsByUserIdAsync } from "./features/cart/CartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectLoggedInUser } from "./features/auth/authSlice";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +57,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectLoggedInUser);
+  useEffect(() => {
+    if (user) {
+      dispatch(fetchItemsByUserIdAsync(user.id));
+    }
+  }, [dispatch, user]);
   return (
     <div className="App">
       <RouterProvider router={router} />
