@@ -364,8 +364,11 @@ export default function Productlist() {
                     <div className="bg-white">
                       <div className="mx-auto max-w-2xl px-4 py-0  sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
                         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                          {products?.map((product) => (
-                            <Link to={"/productdetails/" + product.id}>
+                          {products?.map((product, index) => (
+                            <Link
+                              to={"/productdetails/" + product.id}
+                              key={index}
+                            >
                               <div
                                 key={product.id}
                                 className="group relative border-solid border-2 p-2 border-gray-200 "
@@ -473,6 +476,7 @@ function Pagination({ page, setPage, handlePage, totalItems }) {
             {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
             {Array.from({ length: totalPages }).map((el, index) => (
               <div
+                key={index}
                 onClick={(e) => handlePage(index + 1)}
                 aria-current="page"
                 className={`relative cursor-pointer z-10 inline-flex items-center ${

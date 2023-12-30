@@ -11,25 +11,26 @@ import {
   selectLoggedInUser,
   updateUserAsync,
 } from "../features/auth/authSlice";
-import { createOrderAsync } from "../features/order/orderSlice";
+import {
+  createOrderAsync,
+  selectCurrentOrder,
+} from "../features/order/orderSlice";
 
 const CheckoutPage = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const dispatch = useDispatch();
+  const { register, handleSubmit, reset } = useForm();
+  const user = useSelector(selectLoggedInUser);
+  const items = useSelector(selectCart);
+  const currentOrder = useSelector(selectCurrentOrder);
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setpaymentMethod] = useState(null);
-  const user = useSelector(selectLoggedInUser);
-  const dispatch = useDispatch();
-  const items = useSelector(selectCart);
+
   const totalAmount = items.reduce(
     (amount, item) => item.price * item.quantity + amount,
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
+
   const handleQuantity = (e, item) => {
     dispatch(updateItemAsync({ ...item, quantity: +e.target.value }));
   };
@@ -48,13 +49,15 @@ const CheckoutPage = () => {
 
   const handleOrder = (e) => {
     const order = {
-      items: items,
+      items,
       totalAmount,
       totalItems,
       user,
       paymentMethod,
       selectedAddress,
+      status: "pending",
     };
+
     dispatch(createOrderAsync(order));
   };
 
@@ -62,6 +65,9 @@ const CheckoutPage = () => {
     <>
       {" "}
       {!items.length && <Navigate to="/" replace={true} />}
+      {currentOrder && (
+        <Navigate to={`/order-sucess/"${currentOrder.id}`} replace={true} />
+      )}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
@@ -75,6 +81,7 @@ const CheckoutPage = () => {
                     addresses: [...user.addresses, data],
                   })
                 );
+                reset();
               })}
             >
               <div className="space-y-12">
@@ -418,7 +425,6 @@ const CheckoutPage = () => {
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>
-                    or{" "}
                     <Link to={"/"}>
                       <button
                         type="button"
