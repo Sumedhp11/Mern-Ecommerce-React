@@ -7,19 +7,17 @@ import {
   updateItemAsync,
 } from "../features/cart/CartSlice";
 import { useForm } from "react-hook-form";
-import {
-  selectLoggedInUser,
-  updateUserAsync,
-} from "../features/auth/authSlice";
+import { updateUserAsync } from "../features/auth/authSlice";
 import {
   createOrderAsync,
   selectCurrentOrder,
 } from "../features/order/orderSlice";
+import { selectUserInfo } from "../features/user/userSlice";
 
 const CheckoutPage = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit, reset } = useForm();
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectUserInfo);
   const items = useSelector(selectCart);
   const currentOrder = useSelector(selectCurrentOrder);
   const [selectedAddress, setSelectedAddress] = useState(null);

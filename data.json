@@ -48,9 +48,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
     },
     {
       "id": 4,
@@ -1428,9 +1426,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/78/thumbnail.jpg"]
     },
     {
       "id": 79,
@@ -1443,9 +1439,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/79/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/79/1.jpg"]
     },
     {
       "id": 80,
@@ -2338,7 +2332,17 @@
     {
       "email": "sumedhpawar8966@gmail.com",
       "password": "Sp_210902",
-      "addresses": [],
+      "addresses": [
+        {
+          "name": "Sumedh Pawar",
+          "email": "test@gmail.com",
+          "phone": "1234567788",
+          "street": "11th Main",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "pinCode": "400097"
+        }
+      ],
       "id": 1
     }
   ],
@@ -2394,7 +2398,17 @@
       "user": {
         "email": "sumedhpawar8966@gmail.com",
         "password": "Sp_210902",
-        "addresses": [],
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "test@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          }
+        ],
         "id": 1
       },
       "paymentMethod": "card",
@@ -2430,7 +2444,17 @@
       "user": {
         "email": "sumedhpawar8966@gmail.com",
         "password": "Sp_210902",
-        "addresses": [],
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "test@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          }
+        ],
         "id": 1
       },
       "paymentMethod": "card",
@@ -2467,7 +2491,17 @@
       "user": {
         "email": "sumedhpawar8966@gmail.com",
         "password": "Sp_210902",
-        "addresses": [],
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "test@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          }
+        ],
         "id": 1
       },
       "paymentMethod": "card",
