@@ -2343,7 +2343,15 @@
           "pinCode": "400097"
         }
       ],
+
       "id": 1
+    },
+    {
+      "email": "sumedhp2109@gmail.com",
+      "password": "Simran0221",
+      "addresses": [],
+
+      "id": 2
     }
   ],
   "cart": [

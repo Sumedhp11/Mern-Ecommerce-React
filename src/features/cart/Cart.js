@@ -9,7 +9,6 @@ import {
 import { Link, Navigate } from "react-router-dom";
 
 export default function Cart() {
-  const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
   const items = useSelector(selectCart);
 
@@ -116,7 +115,6 @@ export default function Cart() {
                 <button
                   type="button"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
-                  onClick={() => setOpen(false)}
                 >
                   Continue Shopping
                   <span aria-hidden="true"> &rarr;</span>

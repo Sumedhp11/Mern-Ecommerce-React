@@ -1,9 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import { createUserAsync, selectLoggedInUser } from "./authSlice";
 const Signup = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
   const {
@@ -32,15 +33,17 @@ const Signup = () => {
             <form
               noValidate
               className="space-y-6"
-              onSubmit={handleSubmit((data) =>
+              onSubmit={handleSubmit((data) => {
                 dispatch(
                   createUserAsync({
                     email: data.email,
                     password: data.password,
                     addresses: [],
+                    role: "user",
                   })
-                )
-              )}
+                );
+                navigate("/");
+              })}
             >
               <div>
                 <label
