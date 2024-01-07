@@ -48,7 +48,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ]
     },
     {
       "id": 4,
@@ -1426,7 +1428,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/78/thumbnail.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
+      ]
     },
     {
       "id": 79,
@@ -1439,7 +1443,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/79/1.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/79/1.jpg"
+      ]
     },
     {
       "id": 80,
@@ -1832,6 +1838,27 @@
         "https://i.dummyjson.com/data/products/100/3.jpg",
         "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
       ]
+    },
+    {
+      "title": "Pen",
+      "description": "This is a Nice Pen",
+      "brand": "Apple",
+      "Category": "home-decoration",
+      "price": "20",
+      "discountpercentage": "2",
+      "stock": "400",
+      "thumbnail": "https://5.imimg.com/data5/SELLER/Default/2020/10/PX/KF/AW/20193325/ink-pen.jpg",
+      "iamge1": "https://5.imimg.com/data5/SELLER/Default/2020/10/PX/KF/AW/20193325/ink-pen.jpg",
+      "iamge2": "https://5.imimg.com/data5/SELLER/Default/2020/10/PX/KF/AW/20193325/ink-pen.jpg",
+      "iamge3": "https://5.imimg.com/data5/SELLER/Default/2020/10/PX/KF/AW/20193325/ink-pen.jpg",
+      "images": [
+        null,
+        null,
+        null,
+        "https://5.imimg.com/data5/SELLER/Default/2020/10/PX/KF/AW/20193325/ink-pen.jpg"
+      ],
+      "rating": 0,
+      "id": 101
     }
   ],
   "brands": [
@@ -2332,6 +2359,7 @@
     {
       "email": "sumedhpawar8966@gmail.com",
       "password": "Sp_210902",
+      "role": "admin",
       "addresses": [
         {
           "name": "Sumedh Pawar",
@@ -2343,14 +2371,13 @@
           "pinCode": "400097"
         }
       ],
-
       "id": 1
     },
     {
       "email": "sumedhp2109@gmail.com",
       "password": "Simran0221",
+      "role": "user",
       "addresses": [],
-
       "id": 2
     }
   ],
