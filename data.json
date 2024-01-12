@@ -2381,29 +2381,7 @@
       "id": 2
     }
   ],
-  "cart": [
-    {
-      "title": "Microsoft Surface Laptop 4",
-      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-      "price": 1499,
-      "discountPercentage": 10.23,
-      "rating": 4.43,
-      "stock": 68,
-      "brand": "Microsoft Surface",
-      "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/8/1.jpg",
-        "https://i.dummyjson.com/data/products/8/2.jpg",
-        "https://i.dummyjson.com/data/products/8/3.jpg",
-        "https://i.dummyjson.com/data/products/8/4.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 1,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "items": [
@@ -2494,7 +2472,7 @@
       },
       "paymentMethod": "card",
       "selectedAddress": null,
-      "status": "pending",
+      "status": "delievered",
       "id": 2
     },
     {
@@ -2541,8 +2519,56 @@
       },
       "paymentMethod": "card",
       "selectedAddress": null,
-      "status": "pending",
+      "status": "cancelled",
       "id": 3
+    },
+    {
+      "items": [
+        {
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/8/1.jpg",
+            "https://i.dummyjson.com/data/products/8/2.jpg",
+            "https://i.dummyjson.com/data/products/8/3.jpg",
+            "https://i.dummyjson.com/data/products/8/4.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 1
+        }
+      ],
+      "totalAmount": 1499,
+      "totalItems": 1,
+      "user": {
+        "email": "sumedhpawar8966@gmail.com",
+        "password": "Sp_210902",
+        "role": "admin",
+        "addresses": [
+          {
+            "name": "Sumedh Pawar",
+            "email": "test@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pinCode": "400097"
+          }
+        ],
+        "id": 1
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null,
+      "status": "pending",
+      "id": 4
     }
   ]
 }

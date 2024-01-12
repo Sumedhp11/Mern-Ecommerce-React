@@ -418,6 +418,13 @@ export default function AdminProductlist() {
                                       </p>
                                     </div>
                                   </div>
+                                  {product.deleted && (
+                                    <div>
+                                      <p className="text-sm text-red-400">
+                                        product Deleteds
+                                      </p>
+                                    </div>
+                                  )}
                                 </div>
                               </Link>
                               <div className="w-fit mt-5">
